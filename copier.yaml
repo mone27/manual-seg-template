@@ -7,6 +7,8 @@ include_pretty:
     default: false
     help: Use pretty names for the trees during segmentation (e.g. "Lama_04" instead of "FIS01-02_345970_8059550_04")
 
+_answers_file: .copier-answers.yml
+
 _exclude:
     - "{% if not include_pretty %}processing/pretty{% endif %}"
     - ".git"

@@ -3,8 +3,6 @@ environments:
   default:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
-    indexes:
-    - https://pypi.org/simple
     options:
       pypi-prerelease-mode: if-necessary-or-explicit
     packages:
@@ -234,11 +232,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-1.3.1-h2466b09_2.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-ng-2.3.2-h5112557_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
-      - pypi: https://files.pythonhosted.org/packages/ed/c9/d7977eaacb9df673210491da99e6a247e93df98c715fc43fd136ce1d3d33/arrow-1.4.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/1b/5b/974430b5ffdb7a4f1941d13d83c64a0395114503cc357c6b9ae4ce5047ed/click_didyoumean-0.3.1-py3-none-any.whl
-      - pypi: git+https://github.com/mone27/man-seg-preproc#b9e07f7d4b7d70dc3632cd85cf82a63b7c17fe7b
-      - pypi: https://files.pythonhosted.org/packages/3f/6f/2a79f4fca69732db7bfb413b934ba0eb4e6ba26c121864d396f62575e1ae/td_watson-2.1.0-py2.py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/win-64/_openmp_mutex-4.5-2_gnu.conda
   build_number: 8
@@ -283,27 +276,6 @@ packages:
   - pkg:pypi/altair?source=hash-mapping
   size: 565953
   timestamp: 1763476026233
-- pypi: https://files.pythonhosted.org/packages/ed/c9/d7977eaacb9df673210491da99e6a247e93df98c715fc43fd136ce1d3d33/arrow-1.4.0-py3-none-any.whl
-  name: arrow
-  version: 1.4.0
-  sha256: 749f0769958ebdc79c173ff0b0670d59051a535fa26e8eba02953dc19eb43205
-  requires_dist:
-  - python-dateutil>=2.7.0
-  - backports-zoneinfo==0.2.1 ; python_full_version < '3.9'
-  - tzdata ; python_full_version >= '3.9'
-  - doc8 ; extra == 'doc'
-  - sphinx>=7.0.0 ; extra == 'doc'
-  - sphinx-autobuild ; extra == 'doc'
-  - sphinx-autodoc-typehints ; extra == 'doc'
-  - sphinx-rtd-theme>=1.3.0 ; extra == 'doc'
-  - dateparser==1.* ; extra == 'test'
-  - pre-commit ; extra == 'test'
-  - pytest ; extra == 'test'
-  - pytest-cov ; extra == 'test'
-  - pytest-mock ; extra == 'test'
-  - pytz==2025.2 ; extra == 'test'
-  - simplejson==3.* ; extra == 'test'
-  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/noarch/asttokens-3.0.1-pyhd8ed1ab_0.conda
   sha256: ee4da0f3fe9d59439798ee399ef3e482791e48784873d546e706d0935f9ff010
   md5: 9673a61a297b00016442e022d689faa6
@@ -730,20 +702,6 @@ packages:
   - pkg:pypi/charset-normalizer?source=hash-mapping
   size: 50965
   timestamp: 1760437331772
-- pypi: https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl
-  name: click
-  version: 8.3.1
-  sha256: 981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6
-  requires_dist:
-  - colorama ; sys_platform == 'win32'
-  requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/1b/5b/974430b5ffdb7a4f1941d13d83c64a0395114503cc357c6b9ae4ce5047ed/click_didyoumean-0.3.1-py3-none-any.whl
-  name: click-didyoumean
-  version: 0.3.1
-  sha256: 5c4bb6007cfea5f2fd6583a2fb6701a22a41eb98957e63d0fac41c10e7c3117c
-  requires_dist:
-  - click>=7
-  requires_python: '>=3.6.2'
 - conda: https://conda.anaconda.org/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_1.conda
   sha256: ab29d57dc70786c1269633ba3dff20288b81664d3ff8d21af995742e2bb03287
   md5: 962b9857ee8e7018c22f2776ffa0b2d7
@@ -2209,14 +2167,6 @@ packages:
   - pkg:pypi/m2r2?source=hash-mapping
   size: 17361
   timestamp: 1746266852756
-- pypi: git+https://github.com/mone27/man-seg-preproc#b9e07f7d4b7d70dc3632cd85cf82a63b7c17fe7b
-  name: man-seg-preproc
-  version: 0.0.1
-  requires_dist:
-  - geopandas
-  - hilbertcurve
-  - pyprojroot
-  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/noarch/mapclassify-2.10.0-pyhd8ed1ab_1.conda
   sha256: 967841d300598b17f76ba812e7dae642176692ed2a6735467b93c2b2debe35c1
   md5: cc293b4cad9909bf66ca117ea90d4631
@@ -3221,17 +3171,6 @@ packages:
   purls: []
   size: 155714
   timestamp: 1762510341121
-- pypi: https://files.pythonhosted.org/packages/3f/6f/2a79f4fca69732db7bfb413b934ba0eb4e6ba26c121864d396f62575e1ae/td_watson-2.1.0-py2.py3-none-any.whl
-  name: td-watson
-  version: 2.1.0
-  sha256: f528ba73d74f3b49c300c791ed65aeafd4246575e97479a4ca627cc5e157d135
-  requires_dist:
-  - requests
-  - arrow>=1.0.0
-  - click>=8.0
-  - click-didyoumean
-  - colorama ; sys_platform == 'win32'
-  requires_python: '>=3.6'
 - conda: https://conda.anaconda.org/conda-forge/noarch/threadpoolctl-3.6.0-pyhecae5ae_0.conda
   sha256: 6016672e0e72c4cf23c0cf7b1986283bd86a9c17e8d319212d78d8e9ae42fdfd
   md5: 9d64911b31d57ca443e9f1e36b04385f
