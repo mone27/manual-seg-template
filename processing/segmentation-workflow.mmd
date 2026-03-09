@@ -1,0 +1,24 @@
+%%{init: {'theme': 'neutral'}}%%
+graph TD
+    Start(Automatic segmented tree)
+    Start --> Load[Load in RiSCAN Pro]
+    Load --> ManSeg[Manual segmentation]
+    ManSeg --> IsTree{Is it actually a tree?}
+    IsTree -->|Yes| Tree{Are there multiple trees?}
+    Tree -->|Yes| NewTree[Get a new tree name in the cell]
+    NewTree --> NewTreeQGIS[Add the new tree in QGIS]
+    NewTreeQGIS --> NewTreeQGIS2[Add is_new label in QGIS]
+    NewTreeQGIS2 --> ManSeg
+    IsTree -->|No| NoTree[Mark the tree as is_removed in QGIS]
+    NoTree --> NextTree
+    Tree -->|No| Alive{Is the tree dead?}
+    Alive -->|Yes| Dead[Mark the tree as is_dead in QGIS]
+    Dead --> Seg
+    Alive -->|No| MoveCloud[Move point cloud in the RiSCAN Pro project]
+    MoveCloud -->|Yes| Export[Export the tree as a .laz file]
+    Export --> Seg[Mark the tree as segmented in QGIS]
+    Seg --> NextTree(Next tree)
+
+    classDef main fill:#d4edda,stroke:#5a9e6f,color:#000
+
+    class Start,Load,ManSeg,IsTree,Tree,Alive,MoveCloud,Export,Seg,NextTree main

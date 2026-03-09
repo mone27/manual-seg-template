@@ -1,0 +1,11 @@
+project_name:
+    type: str
+    help: Name of the project (e.g. Mount_fisher)
+
+include_pretty:
+    type: bool
+    default: false
+    help: Use pretty names for the trees during segmentation (e.g. "Lama_04" instead of "FIS01-02_345970_8059550_04")
+
+_exclude:
+    - "{% if not include_pretty %}processing/pretty{% endif %}"

@@ -1,0 +1,24 @@
+[workspace]
+authors = ["Simone <simone.massaro@ugent.be>"]
+channels = ["conda-forge"]
+name = "{{ project_name }}"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+render-diagram = "npx -y @mermaid-js/mermaid-cli -i processing/segmentation-workflow.mmd -o processing/segmentation-workflow.png --scale 3"
+[dependencies]
+nodejs = ">=22,<23"
+python = ">=3.14.2,<3.15"
+geopandas = ">=1.1.1,<2"
+ipykernel = ">=7.1.0,<8"
+pyprojroot = ">=0.3.0,<0.4"
+pyogrio = ">=0.12.1,<0.13"
+fastcore = ">=1.12.21,<2"
+polars = ">=1.38.1,<2"
+pyarrow = ">=23.0.1,<24"
+laspy = ">=2.7.0,<3"
+lazrs-python = ">=0.8.1,<0.9"
+tqdm = ">=4.67.3,<5"
+ipywidgets = ">=8.1.8,<9"
+altair = ">=6.0.0,<7"
